@@ -4,7 +4,7 @@ import study.tobyspring.domain.user.User;
 
 import java.sql.*;
 
-public abstract class UserDao {
+public class UserDao {
 
     private ConnectionMaker connectionMaker;
 
@@ -27,7 +27,7 @@ public abstract class UserDao {
         c.close();
     }
 
-    public abstract Connection getConnection() throws SQLException, ClassNotFoundException;
+    //public abstract Connection getConnection() throws SQLException, ClassNotFoundException;
 
     public User get(String id) throws  ClassNotFoundException, SQLException {
         Connection c = connectionMaker.makeConnection();
