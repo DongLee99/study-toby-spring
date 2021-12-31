@@ -10,4 +10,12 @@ public class DaoFactory {
         UserDao userDao = new UserDao(connectionMaker);
         return userDao;
     }
+
+    public AccountDao accountDao() {
+        return new AccountDao(connectionMaker());
+    }
+
+    public ConnectionMaker connectionMaker() {
+        return new DConnectionMaker();
+    }
 }
